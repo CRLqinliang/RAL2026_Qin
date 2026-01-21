@@ -84,14 +84,12 @@
 \begin{document}
 \title{Beyond Black-Box Learning: Analytical Energy-Driven Regrasping for Multi-step Planning}
 
-% Analytical Regrasp Using Energy-base modeling.
-% 抓取是提前已知的，在可控范围内选出来的，预测是Grasp的label, 所以称为analytical. 最好加上learning与analytical形成冲突对比，让读者有兴趣读下去
 
 % two-dimensional manifolds
-\author{Liang Qin$^{1}$, Weiwei Wan$^{1*}$, and Kensuke Harada$^{1}$
+\author{Liang Qin, Weiwei Wan and Kensuke Harada
 % \thanks{${}^{1}$Graduate School of Engineering Science, The University of Osaka, Japan. ${}^{2}$H.U. Group Research Institute G.K., Japan.}
 % \thanks{Contact: Weiwei Wan, {\tt\small wan.weiwei.es@osaka-u.ac.jp}}}
-\thanks{The work was supported by a joint project between The University of Osaka and H. U. Group Research Institute. ${}^1$L. Qin, W. Wan, and K. Harada are with Graduate School of Engineering Science, The University of Osaka, Japan. ${}^2$J. Takahashi, R. Negishi, and M. Matsushita are with H.U. Group Research Institute G.K., Japan. ${}^{*}$Contact: Weiwei Wan, {wan.weiwei.es@osaka-u.ac.jp}. Digital Object Identifier (DOI):}}
+\thanks{ Liang Qin, Weiwei Wan, and Kensuke Harada are with Graduate School of Engineering Science, The University of Osaka, Japan. Contact: Weiwei Wan, {wan.weiwei.es@osaka-u.ac.jp}. Digital Object Identifier (DOI):}}
 % \thanks{1. Graduate School of Engineering Science, Osaka University, Japan. 2. College of Computer and Information Sciences, Fujian Agriculture and Forestry University, China. 3. H.U. Group Research Institute G.K., Japan}
 % \thanks{Contact: Weiwei Wan, {\tt\small wan.weiwei.es@osaka-u.ac.jp}}}
 \markboth{IEEE ROBOTICS AND AUTOMATION LETTERS. PREPRINT VERSION. ACCEPTED May, 2026}
@@ -167,7 +165,7 @@ Nevertheless, a fundamental trade-off exists between generalization to unknown o
 
 In this work, we address this challenge by making a deliberate design choice: we prioritize execution robustness over generalization to unknown categories. By explicitly leveraging the known geometry assumption—standard in controlled industrial settings—we trade generalization to unknown instances for the strict enforcement of stability constraints. We analytically constrain poses to the exact $SE(2)$ stable manifolds, eliminating physical instability by definition. This allows us to reframe the problem not as a loose approximation, but as a precise iterative optimization on a continuous Free Energy landscape, enabling the autonomous determination of the optimal sequence length.
 
-\section{Energy-Based Reorientation Planning}
+\section{Energy-Based Regrasp Planning}
 % 有不少方向
 
 

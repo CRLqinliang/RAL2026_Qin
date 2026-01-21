@@ -1,0 +1,12 @@
+{
+    // 启用自动换行，防止超长行导致编辑器扩展宽度
+    "editor.wordWrap": "on",
+    
+    // // 设置编辑器最大宽度（可选，单位：字符数）
+    // "editor.rulers": [80, 100],
+    
+    // 编辑器布局设置
+    "workbench.editor.splitInGroupLayout": "horizontal",
+    "workbench.editor.splitSizing": "split"
+}
+

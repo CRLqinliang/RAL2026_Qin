@@ -1,0 +1,119 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{IEEEexample:BSTcontrol}
+\citation{tournassoud1987regrasping}
+\citation{cho2003complete}
+\citation{simeon2004manipulation}
+\citation{kingston2022scaling}
+\citation{wang2024center}
+\citation{raessa2021planning}
+\citation{simeon2004manipulation}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces When a single pick-and-place manipulation is infeasible under given object poses $\bm  {T}_{\mathrm  {init}}$ and $\bm  {T}_{\mathrm  {goal}}$, a regrasp via an intermediate pose $\bm  {T}_{\mathrm  {mid}}$ (yellow) is required. We propose a shared grasp connectivity metric based on EBMs (specifically, the joint energy) to generate an optimal intermediate pose $\bm  {T}_{\mathrm  {mid}}$ within all grasp poses $\gamma \in \bm  {\mathcal  {G}}_0$. This facilitates the construction of a valid object reorientation chain bridging the $\bm  {T}_{\mathrm  {init}}$ and $\bm  {T}_{\mathrm  {goal}}$, enabling multi-step pick-and-place planning.}}{1}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig_1}{{1}{1}{When a single pick-and-place manipulation is infeasible under given object poses $\boldsymbol {T}_{\mathrm {init}}$ and $\boldsymbol {T}_{\mathrm {goal}}$, a regrasp via an intermediate pose $\boldsymbol {T}_{\mathrm {mid}}$ (yellow) is required. We propose a shared grasp connectivity metric based on EBMs (specifically, the joint energy) to generate an optimal intermediate pose $\boldsymbol {T}_{\mathrm {mid}}$ within all grasp poses $\gamma \in \boldsymbol {\mathcal {G}}_0$. This facilitates the construction of a valid object reorientation chain bridging the $\boldsymbol {T}_{\mathrm {init}}$ and $\boldsymbol {T}_{\mathrm {goal}}$, enabling multi-step pick-and-place planning}{figure.caption.1}{}}
+\citation{wan2019preparatory}
+\citation{ma2018regrasp}
+\citation{cruciani2018dexterous}
+\citation{nagahama2025bimanual}
+\citation{hu2023multi}
+\citation{qin2023dual}
+\citation{levit2024solving}
+\citation{levit2025regrasp}
+\citation{wada2022reorientbot}
+\citation{mishra2024reorientdiff}
+\citation{xu2022efficient}
+\citation{xu2023learning}
+\citation{chen2025closed}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Graph-based regrasp planning}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Learning-based Regrasp Planning}{2}{subsection.2.2}\protected@file@percent }
+\citation{qin2025learning}
+\citation{ko2025simultaneous}
+\citation{liu2025planning}
+\citation{mitchell2025building}
+\citation{urain2022learning}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Energy-Based Regrasp Planning}{3}{section.3}\protected@file@percent }
+\newlabel{sec:regrasp_planning}{{III}{3}{Energy-Based Regrasp Planning}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Shared Grasp Modeling}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{eq:joint_prob}{{1}{3}{Shared Grasp Modeling}{equation.3.1}{}}
+\newlabel{eq:additive_energy}{{2}{3}{Shared Grasp Modeling}{equation.3.2}{}}
+\newlabel{eq_shared_grasp}{{3}{3}{Shared Grasp Modeling}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Shared Grasp Connectivity Chain Modeling}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec_free_energy}{{\mbox  {III-B}}{3}{Shared Grasp Connectivity Chain Modeling}{subsection.3.2}{}}
+\newlabel{eq_free_energy_link}{{4}{3}{Shared Grasp Connectivity Chain Modeling}{equation.3.4}{}}
+\newlabel{eq_Intermediate_pose_optimization}{{5}{3}{Shared Grasp Connectivity Chain Modeling}{equation.3.5}{}}
+\newlabel{eq_balance_item}{{6}{3}{Shared Grasp Connectivity Chain Modeling}{equation.3.6}{}}
+\newlabel{eq_objective_function}{{7}{4}{Shared Grasp Connectivity Chain Modeling}{equation.3.7}{}}
+\newlabel{eq_langevin_update}{{8}{4}{Shared Grasp Connectivity Chain Modeling}{equation.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Adaptive Multi-step Regrasp Planning Framework}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec:iterative_planning_method}{{\mbox  {III-C}}{4}{Adaptive Multi-step Regrasp Planning Framework}{subsection.3.3}{}}
+\newlabel{eq:ensemble_init}{{9}{4}{Adaptive Multi-step Regrasp Planning Framework}{equation.3.9}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Adaptive Iterative Deepening Planning}}{4}{algocf.1}\protected@file@percent }
+\newlabel{alg_regrasp_planning}{{1}{4}{Adaptive Multi-step Regrasp Planning Framework}{algocf.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Bottle stable placements. (b) A candidate pose $\bm  {T}_i$ parameterized by applying a planar transformation from the $m_i$-th canonical pose.}}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig_object_initial}{{2}{4}{(a) Bottle stable placements. (b) A candidate pose $\boldsymbol {T}_i$ parameterized by applying a planar transformation from the $m_i$-th canonical pose}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments and Analysis}{4}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) Feasible (white) and shared (blue) grasps at init and goal poses. (b)-(c) Energy profiles of 50 grasp candidates at each pose. (d) Summed energy distribution, where lower values indicate valid shared grasps.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig_energy_composition}{{3}{5}{(a) Feasible (white) and shared (blue) grasps at init and goal poses. (b)-(c) Energy profiles of 50 grasp candidates at each pose. (d) Summed energy distribution, where lower values indicate valid shared grasps}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Proposed Measurement Experiment}{5}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-A}1}Energy-based shared grasp}{5}{subsubsection.4.1.1}\protected@file@percent }
+\newlabel{subsec_shard_grasp_connectivity_chain}{{\mbox  {IV-A}2}{5}{Shared Grasp Connectivity}{subsubsection.4.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-A}2}Shared Grasp Connectivity}{5}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces (a.i-iii) Object motion from Goal to Start, treating the interpolated pose as the intermediate pose ($\bm  {T}_{\mathrm  {mid}}$). (b.i) Variation of $\mathcal  {J}^+_c$ during interpolation. (b.ii) Variation of $\mathcal  {J}^h_c$ during interpolation. (b.iii) Variation of the proposed $\mathcal  {J}_c$ during interpolation. (c.i) Number of shared grasps between $\bm  {T}_{\mathrm  {mid}}$ and $\bm  {T}_{\mathrm  {init/goal}}$. (c.ii) The count of grasps simultaneously shared across Init, Mid, and Goal poses.}}{5}{figure.caption.5}\protected@file@percent }
+\newlabel{fig_shared_grasp_chain_exp}{{4}{5}{(a.i-iii) Object motion from Goal to Start, treating the interpolated pose as the intermediate pose ($\boldsymbol {T}_{\mathrm {mid}}$). (b.i) Variation of $\mathcal {J}^+_c$ during interpolation. (b.ii) Variation of $\mathcal {J}^h_c$ during interpolation. (b.iii) Variation of the proposed $\mathcal {J}_c$ during interpolation. (c.i) Number of shared grasps between $\boldsymbol {T}_{\mathrm {mid}}$ and $\boldsymbol {T}_{\mathrm {init/goal}}$. (c.ii) The count of grasps simultaneously shared across Init, Mid, and Goal poses}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Object mid-pose generation experiment}{5}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-B}1}One-step Mid-pose Experiment}{5}{figure.caption.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces (a.i-iii) Optimization process: blue and red indicate low and high energy, respectively. (b.i) GT distribution of feasible intermediate poses obtained via exhaustive grid sampling. (b.ii) Poses generated by our method ($\mathcal  {F}_{\text  {link}}$). (b.iii) Poses generated by the truncated metric ($\mathcal  {F}^h_{\text  {link}}$).}}{6}{figure.caption.6}\protected@file@percent }
+\newlabel{fig_one_step_exp}{{5}{6}{(a.i-iii) Optimization process: blue and red indicate low and high energy, respectively. (b.i) GT distribution of feasible intermediate poses obtained via exhaustive grid sampling. (b.ii) Poses generated by our method ($\mathcal {F}_{\text {link}}$). (b.iii) Poses generated by the truncated metric ($\mathcal {F}^h_{\text {link}}$)}{figure.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comparison of mid-pose generation using the proposed metric ($\mathcal  {F}_{\mathrm  {link}}$) vs. the truncated metric ($\mathcal  {F}^h_{\text  {link}}$).}}{6}{table.caption.7}\protected@file@percent }
+\newlabel{tab_one_step_exp}{{I}{6}{Comparison of mid-pose generation using the proposed metric ($\mathcal {F}_{\mathrm {link}}$) vs. the truncated metric ($\mathcal {F}^h_{\text {link}}$)}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-B}2}Mid-pose generation on unseen grasps}{6}{subsubsection.4.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Generalization Performance on unseen grasps.}}{6}{table.caption.10}\protected@file@percent }
+\newlabel{tab_unseen_grasps_step_exp}{{II}{6}{Generalization Performance on unseen grasps}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-B}3}Mid-pose generation on unseen end-effectors}{6}{subsubsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Evaluation of Adaptive Regrasp Planning}{6}{subsection.4.3}\protected@file@percent }
+\newlabel{subsec_iterative_planning_exp}{{\mbox  {IV-C}}{6}{Evaluation of Adaptive Regrasp Planning}{subsection.4.3}{}}
+\bibstyle{IEEEtran}
+\bibdata{citations.bib}
+\bibcite{tournassoud1987regrasping}{1}
+\bibcite{cho2003complete}{2}
+\bibcite{simeon2004manipulation}{3}
+\bibcite{kingston2022scaling}{4}
+\bibcite{wang2024center}{5}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Dataset of object shapes and table-stable placement poses, along with the feasible manipulation dataset for different end-effectors on different objects.}}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig_unseen_exp}{{6}{7}{Dataset of object shapes and table-stable placement poses, along with the feasible manipulation dataset for different end-effectors on different objects}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Three trajectory particles optimization for Bottle multi-step planning (left to right). Cyan and red denote $\bm  {T}_{\mathrm  {mid}_1}$ and $\bm  {T}_{\mathrm  {mid}_2}$. Lines connect trajectories, with colors indicating training steps.}}{7}{figure.caption.14}\protected@file@percent }
+\newlabel{fig_bottle_multi_step_generation}{{7}{7}{Three trajectory particles optimization for Bottle multi-step planning (left to right). Cyan and red denote $\boldsymbol {T}_{\mathrm {mid}_1}$ and $\boldsymbol {T}_{\mathrm {mid}_2}$. Lines connect trajectories, with colors indicating training steps}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions}{7}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Future Work}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{7}{section*.17}\protected@file@percent }
+\bibcite{raessa2021planning}{6}
+\bibcite{wan2019preparatory}{7}
+\bibcite{ma2018regrasp}{8}
+\bibcite{cruciani2018dexterous}{9}
+\bibcite{nagahama2025bimanual}{10}
+\bibcite{hu2023multi}{11}
+\bibcite{qin2023dual}{12}
+\bibcite{levit2024solving}{13}
+\bibcite{levit2025regrasp}{14}
+\bibcite{wada2022reorientbot}{15}
+\bibcite{mishra2024reorientdiff}{16}
+\bibcite{xu2022efficient}{17}
+\bibcite{xu2023learning}{18}
+\bibcite{chen2025closed}{19}
+\bibcite{qin2025learning}{20}
+\bibcite{ko2025simultaneous}{21}
+\bibcite{liu2025planning}{22}
+\bibcite{mitchell2025building}{23}
+\bibcite{urain2022learning}{24}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Cross-validation Performance: Success Rate (\%) / (FP / FN) {\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  \textbf  {Working.}\end  {CJK*}}}}{8}{table.caption.12}\protected@file@percent }
+\newlabel{tab_cross_val_stack}{{III}{8}{Cross-validation Performance: Success Rate (\%) / (FP / FN) \lqin {Working.}}{table.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Statistical summary of multi-step regrasp planning under different grasp sparsity levels ($N_{\text  {sub}}$).}}{8}{table.caption.15}\protected@file@percent }
+\newlabel{tab:planning_stats}{{IV}{8}{Statistical summary of multi-step regrasp planning under different grasp sparsity levels ($N_{\text {sub}}$)}{table.caption.15}{}}
+\newlabel{Appendix_I}{{VI}{9}{Appendix}{section*.18}{}}
+\newlabel{eq_truncated_free_energy}{{12}{9}{Appendix}{equation.6.12}{}}
+\gdef \@abspage@last{9}
