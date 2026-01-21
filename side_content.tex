@@ -1,0 +1,92 @@
+\section{Experiments}
+\lqin{在多步pick-and-place规划中，对于过渡姿态$\boldsymbol{T}_{t}$和抓取姿态$\gamma$的规划是至关重要的。在实验章节中，我们首先对比了EBM和其他生成式方法对feasible grasp和shared grasp进行判别和生成的效果，在判别实验中测试了准确度和时间。在生成实验中，我们测试了不同模型生成的grasp pose的IK、碰撞拒绝率，稳定抓取成功率，成功抓取之后的放置位置和姿态误差和推理时间。}
+
+\subsection{Classification and generation task of grasp pose.}
+\lqin{在这节实验中，我们按照统一标准对比了不同模型在判别式和生成式任务中的性能和优缺点，同时也讨论了在顺序操作规划角度看来的优缺点情况。}
+\subsubsection{classification tasks}
+\lqin{在对给定抓取姿态的评价实验中，我们对比了Energy-base Model, Diffusion Model, FLow matching, Recticied flow (RF-1,RF-2)在对可行抓取(feasible grasp)和共享抓取(shared grasp)分类任务中的表现。EBM通过对比学习将可行与不可行$(\boldsymbol{T},\boldsymbol{g})$分开来训练一个能量模型\cite{qin2025learning}, 为了对比生成模型在分类任务上的效果，我们考虑去拟合$\log p(\boldsymbol{g}|\boldsymbol{T})$分布。对于Diffusion Model 我们参考\cite{ho2020denoising}中的推导，ELBO 可近似为加权噪声预测 MSE，因此在工程上采用负的噪声预测误差（在若干时间步上取平均）作为$\log p(\boldsymbol{g}|\boldsymbol{T})$的近似用于二分类评估，而不把它当作严格的对数似然。 Flow Matching/Rectified Flow 用的是完整的 ODE + Hutchinson\cite{ben2022matching}，去计算$\log p(\boldsymbol{g}|\boldsymbol{T})$。}
+
+\lqin{所有任务都用bottle物体(350候选抓取)相同20k可行抓取数据集，其中训练、测试和验证集划分比例是70$\%$，15$\%$和15$\%$. 在feasible grasp分类任务中，利用MaxF1的方式在验证集找到最佳阈值后再在测试集上进行测试。对于shared grasp分类任务，我们通过随机采样两个可行抓取数据来合成了同样数量共享抓取(20k)用于寻找最佳阈值与测试，取15$\%$数据来寻找阈值，再取另外15$\%$来测试，其中时间T是模型的输入输出时间，shared grasp只增加了batch size。实验结果如表格\ref{tab_classificaiton_task}所示。}
+
+\begin{table}[!htbp]
+\setlength{\tabcolsep}{6pt}
+\centering
+\caption{Feasible and Shared Grasp classification. }
+\label{tab_classificaiton_task}
+\begin{threeparttable}
+\begin{tabular}{l|cccc|cccc}
+\toprule
+& \multicolumn{4}{c|}{Feasible Grasp} 
+& \multicolumn{4}{c}{Shared Grasp} \\
+\cmidrule{2-9}
+& P $\uparrow$ & R $\uparrow$  & F1 $\uparrow$  & T $\downarrow$ 
+& P $\uparrow$ & R $\uparrow$  & F1 $\uparrow$  & T $\downarrow$ \\
+\midrule
+EM
+&\textbf{97.5}&97.7 &\textbf{97.6} &\phantom{0}\textbf{0.3}
+&\textbf{99.6}&\textbf{82.7 }&\textbf{90.3} &\phantom{0}\textbf{0.3}\\
+DM
+&83.2 &99.8 &90.8 &\phantom{0}3.2
+&17.0 &60.5 &26.6 &5.02\\
+FM
+&84.0 &99.1 &91.0 &48.6
+&19.4 &67.9 &30.2 &49.2\\
+RF-1
+&83.3 &\textbf{99.9} &90.8 &25.4
+&16.1 &70.2 &26.3 &26.9 \\
+RF-2
+&73.2 &96.6 &83.3 &\phantom{0}5.2
+&\phantom{0}7.6 &40.7 &12.8 &\phantom{0}6.3 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+  \item[Note 1] EM: Energy-based model, DM: Diffusion Model, FM: Flow Matching, RF: Rectified Flow.
+  \item[Note 2] FM - 100 steps, RF-1 50 steps, DM, RF-2 10 steps evaluation.
+  \item[Note 3] P - precision, R - recall, T - Time(ms).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\lqin{实验结果表明EBM在对可行和共享抓取的分类效果最好，速度最快。DM由于用了近似计算预测速度相比起FM系列模型要快，虽然在RF-2模型上把步数降低到跟DM一样后速度加快很多，但是分类效果也因为误差累积有所下降。同时我们也发现在对shared grasp预测实验中，生成模型普遍效果变差很多。我们认为是因为生成模型只见过正样本，而没有对负样本有任何认知，对于某些未见过的负样本容易给一个较高的概率密度，从而使得precision降低. }
+
+\subsubsection{generation tasks}
+\lqin{在当前这个实验中我们对比了不同模型生成的抓取效果，包括是否违法拟运动学约束，碰撞约束(夹爪宽度最大），是否能够在pybullet内成功抓取(在手中不掉落，不出现滑移）以及当成功抓取再进行抬升放置后的放置位置+姿态误差。具体来说，我们给在指定范围内随机采样了3k个物体位姿，以给定物体姿态$\boldsymbol{T}$来生成可行抓取$\boldsymbol{g}$。其中EBM利用langevin朝着能量最小采样100步，DM通过100步去噪生成抓取，FM，RF-1和RF-2都利用Euler方法分别计算100步，50步和10步。随后我们对所有模型分别生成的抓取集合$\boldsymbol{G}$,进行IK检测过滤，再进行碰撞检测过滤，再把通过检测的抓取和物体姿态放在pybullet里面测试抓取成功率，若抓取成功，再计算原地放下之后与初始位姿的姿态误差。其中$T$是生成单个grasp pose的平均时间。}
+
+
+\begin{table}[!htbp]
+\setlength{\tabcolsep}{2.pt}
+\centering
+\caption{Feasible and Shared Grasp Generation.}
+\label{tab_generation_task}
+\begin{threeparttable}
+\begin{tabular}{l|cccccc|cccccc}
+\toprule
+& \multicolumn{6}{c|}{Feasible Grasp}  
+& \multicolumn{6}{c}{Shared Grasp} \\ 
+\cmidrule(lr){2-7} \cmidrule(lr){8-13}
+& K-rej &C-rej &Suc &$\Delta$p  &$\Delta$r  &T
+& K-rej &C-rej &Suc &$\Delta$p  &$\Delta$r  &T  \\
+\midrule
+EM  & 62.5 &25.7& \phantom{0}0.0 &\phantom{0}- &\phantom{0}- & \phantom{0}0.9 &60.2 &26.6 &\phantom{0}0.0 &\phantom{0}- &\phantom{0}- &\phantom{0}1.3 \\
+DM  & 15.7 & 29.3 & 93.5 &\phantom{0}8.7 &\phantom{0}1.4 &\phantom{0}1.2 &20.1 &23.8 &83.1 &\phantom{0}8.9 &\phantom{0}1.1 &\phantom{0}1.6 \\
+FM  & \phantom{0}7.5 & 29.2 &98.0 & \phantom{0}8.5 & \phantom{0}1.5 & \phantom{0}0.8 &13.6 &21.0 &\textbf{95.7} &\phantom{0}9.2 &\phantom{0}0.9 &\phantom{0}1.2 \\
+RF-1 & \phantom{0}6.5 & 30.7 & \textbf{99.0} & \phantom{0}8.1 & \phantom{0}1.5 & \phantom{0}0.5 &11.8 &19.6 &93.6 &\phantom{0}8.8 &\phantom{0}0.8 &\phantom{0}0.6 \\
+RF-2 & \phantom{0}6.6 & 30.0 & 98.6 & \phantom{0}8.3 & \phantom{0}1.5 & \phantom{0}0.1 &13.0 &18.6 &94.6 &\phantom{0}8.9 &\phantom{0}0.8 &\phantom{0}0.1 \\
+\midrule
+EM-C &\phantom{0}\textbf{0.9} &\phantom{0}\textbf{7.1} &91.2 &\phantom{0}\textbf{7.2} &\phantom{0}\textbf{1.1} &\phantom{0}- 
+&\textbf{0.1} &\phantom{0}\textbf{9.3} &87.4 &\phantom{0}\textbf{7.7} &\phantom{0}\textbf{0.7} &\phantom{0}-\\
+
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+  \item[Note 1] EM: Energy-based Model, DM: Diffusion Model, FM: Flow Matching, RF: Rectified Flow, EM-C: Energy-based Model in Classification.
+  \item[Note 2] EM, DM, FM - 100 steps, RF-1 50 steps, RF-2 10 steps.
+  \item[Note 3] K-rej - IK rejection ratio, C-rej - Collision rejection ratio, Suc - grasp and lift up success rate, $\Delta$p - medium position error(mm), $\Delta$r - medium rotate error(°).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\lqin{EM在抓取姿态生成的结果最差，我们认为是由于训练过程中的对比项导致能量面的梯度很大使得采样过程及其不稳定，生成的抓取不满足约束。我们发现如果用mesh生成的抓取来进行测试，反而具有最低的抓取成功率，我们发现利用mesh生成的部分抓取可能会由于mesh三角片面积而导致抓取不稳定。相反，生成模型会朝着抓取密集的地方生成，虽然碰撞约束违反较多，但成功抓取率是相对较高的。同时，生成的grasp pose导致的放置误差比判别的要高。（目前可能由于Pybullet环境动力学参数设置，导致物体有一点反弹使得放置误差普遍有点大，待修改）}
+
+\lqin{这个实验是为了说明EBM在判别grasp pose上的优势，也明确了生成grasp pose上的劣势；但也说明了生成式grasp pose在判别式grasp pose上对pick-and-place中IK, 碰撞拒绝率，抓取成功率和放置误差的劣势，说明在实际执行过程中，如果在已知物体形状信息的情况下，还是判别式抓取的综合素质要好一点。}
