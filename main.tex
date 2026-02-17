@@ -262,7 +262,7 @@ Our goal is to find the minimum number of intermediate poses $N$ and the corresp
 
 \begin{algorithm}[!htbp]
     \small
-    \caption{Adaptive Iterative Deepening Planning\wan{这个算法的$\mathcal{S}_i$符号应该用$\mathcal{G}_\mathrm{shared}$?nizh}}
+    \caption{Adaptive Iterative Deepening Planning\wan{这个算法的$\mathcal{S}_i$符号应该用$\mathcal{G}_\mathrm{shared}$?你这个到底是regrasp planning还是pose sequence，如果是regrasp，最后返回的不应该是$\mathbf{T}$?}}
     \label{alg_regrasp_planning}
     \SetAlgoLined
     
@@ -362,6 +362,8 @@ To perform optimization, we generate a batch $\boldsymbol{\Psi}_B$ containing $B
     \label{eq_langevin_update}
 \end{equation}
 where $\boldsymbol{z}_k \sim \mathcal{N}(\boldsymbol{0}, \boldsymbol{I})$ is the random noise term, $\eta$ is the step size, $k$ is the iteration step, and $\tau$ is the temperature parameter. The noise term regulates the balance between local gradient guidance and global exploration, producing optimized candidate sequence ${\{\mathbf{T}\}_{i=0}^{N+1}}^{(*)}$ for the fixed $N$.
+
+\wan{如果是regrasp}
 
 % % \lqin{如果要把Fig.4上半部份的图片放到Fig.2中，那么这部分需要移动到\ref{subsec_shared_grasp_modeling}这部分，不然符号无法说明。}
 % \begin{figure}[!htbp]
