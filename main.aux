@@ -1,0 +1,132 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{IEEEexample:BSTcontrol}
+\citation{tournassoud1987regrasping}
+\citation{cho2003complete}
+\citation{simeon2004manipulation}
+\citation{9865999}
+\citation{10629240}
+\citation{raessa2021planning}
+\citation{simeon2004manipulation}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec_introduction}{{I}{1}{Introduction}{section.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces When a single pick-and-place manipulation is infeasible under given object poses $\mathbf  {T}_{\mathrm  {init}}$ and $\mathbf  {T}_{\mathrm  {goal}}$, a regrasp via an intermediate pose $\mathbf  {T}_{\mathrm  {mid}}$ (yellow) is required. We propose a \textit  {pose connectivity} score $Q_{p}(\mathbf  {T}_a, \mathbf  {T}_b)$ and a differentiable \textit  {pose sequence} cost $J_{s}(\mathcal  {T}_{\mathrm  {mid}})$ based on EBMs to generate an optimal intermediate pose $\mathbf  {T}_{\mathrm  {mid}}$ by following the gradient $\nabla _{\mathbf  {T}_{\mathrm  {mid}}}J_s$. This facilitates the construction of a valid object reorientation sequence bridging the $\mathbf  {T}_{\mathrm  {init}}$ and $\mathbf  {T}_{\mathrm  {goal}}$, enabling multi-step pick-and-place planning.\footnotemark [1]}}{1}{figure.1}\protected@file@percent }
+\newlabel{fig_1}{{1}{1}{When a single pick-and-place manipulation is infeasible under given object poses $\mathbf {T}_{\mathrm {init}}$ and $\mathbf {T}_{\mathrm {goal}}$, a regrasp via an intermediate pose $\mathbf {T}_{\mathrm {mid}}$ (yellow) is required. We propose a \textit {pose connectivity} score $Q_{p}(\mathbf {T}_a, \mathbf {T}_b)$ and a differentiable \textit {pose sequence} cost $J_{s}(\mathcal {T}_{\mathrm {mid}})$ based on EBMs to generate an optimal intermediate pose $\mathbf {T}_{\mathrm {mid}}$ by following the gradient $\nabla _{\mathbf {T}_{\mathrm {mid}}}J_s$. This facilitates the construction of a valid object reorientation sequence bridging the $\mathbf {T}_{\mathrm {init}}$ and $\mathbf {T}_{\mathrm {goal}}$, enabling multi-step pick-and-place planning.\protect \footnotemark [1]}{figure.1}{}}
+\citation{8611208}
+\citation{8453906}
+\citation{8594303}
+\citation{11037521}
+\citation{10341842}
+\citation{10093024}
+\citation{10610974}
+\citation{11247727}
+\citation{wada2022reorientbot}
+\citation{10610749}
+\citation{9811547}
+\citation{10313307}
+\citation{10955269}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Graph-based Regrasp Planning}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Learning-based Regrasp Planning}{2}{subsection.2.2}\protected@file@percent }
+\citation{11247030}
+\citation{10948354}
+\citation{mitchell2025building}
+\citation{9981264}
+\citation{11316217}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Energy-Based Regrasp Planning}{3}{section.3}\protected@file@percent }
+\newlabel{sec_regrasp_planning}{{III}{3}{Energy-Based Regrasp Planning}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Shared Grasp}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec_shared_grasp_modeling}{{\mbox  {III-A}}{3}{Shared Grasp}{subsection.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Bottle object. (b) An annotated grasp defined in the object canonical frame. (c) All grasps form a grasp space $\mathcal  {G}$. (d) Feasible grasps in the world frame, or namely workspace.}}{3}{figure.2}\protected@file@percent }
+\newlabel{fig_feasible_grasp}{{2}{3}{(a) Bottle object. (b) An annotated grasp defined in the object canonical frame. (c) All grasps form a grasp space $\mathcal {G}$. (d) Feasible grasps in the world frame, or namely workspace}{figure.2}{}}
+\newlabel{eq_joint_prob}{{1}{3}{Shared Grasp}{equation.3.1}{}}
+\newlabel{eq_additive_energy}{{2}{3}{Shared Grasp}{equation.3.2}{}}
+\newlabel{eq_shared_grasp}{{3}{3}{Shared Grasp}{equation.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Validation of energy compositionality. (a) Ground truth feasible (white) and shared (blue) grasps. (b)-(c) Individual energy landscapes $E_{\phi _f}$ for initial and goal poses. (d) Joint energy distribution obtained by summation, where low-energy minima correctly align with the shared grasps in (a).}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig_energy_composition}{{3}{3}{Validation of energy compositionality. (a) Ground truth feasible (white) and shared (blue) grasps. (b)-(c) Individual energy landscapes $E_{\phi _f}$ for initial and goal poses. (d) Joint energy distribution obtained by summation, where low-energy minima correctly align with the shared grasps in (a)}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Object Pose Connectivity Score}{3}{subsection.3.2}\protected@file@percent }
+\citation{7139796}
+\newlabel{eq_free_energy_link}{{4}{4}{Object Pose Connectivity Score}{equation.3.4}{}}
+\newlabel{eq_objective_function}{{5}{4}{Object Pose Connectivity Score}{equation.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Multi-step Regrasp Planning}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec_iterative_planning_method}{{\mbox  {III-C}}{4}{Multi-step Regrasp Planning}{subsection.3.3}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Adaptive Iterative Deepening Planning}}{4}{algocf.1}\protected@file@percent }
+\newlabel{alg_regrasp_planning}{{1}{4}{Multi-step Regrasp Planning}{algocf.1}{}}
+\newlabel{line_horizon_step}{{1}{4}{Multi-step Regrasp Planning}{AlgoLine.1.1}{}}
+\newlabel{line_init}{{2}{4}{Multi-step Regrasp Planning}{AlgoLine.1.2}{}}
+\newlabel{line_opt_process}{{3}{4}{Multi-step Regrasp Planning}{AlgoLine.1.3}{}}
+\newlabel{line_langevin}{{5}{4}{Multi-step Regrasp Planning}{AlgoLine.1.5}{}}
+\newlabel{line_min_energy}{{6}{4}{Multi-step Regrasp Planning}{AlgoLine.1.6}{}}
+\newlabel{line_verify}{{9}{4}{Multi-step Regrasp Planning}{AlgoLine.1.9}{}}
+\newlabel{line_success}{{15}{4}{Multi-step Regrasp Planning}{AlgoLine.1.15}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Batch Verification for Step~3 (Practical Variant)}}{4}{algocf.2}\protected@file@percent }
+\newlabel{alg_batch_verify}{{2}{4}{Multi-step Regrasp Planning}{algocf.2}{}}
+\newlabel{eq_ensemble_init}{{6}{4}{Multi-step Regrasp Planning}{equation.3.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces (a) Stable placements on a tabletop environment. (b) Intermediate poses constrained to planar perturbations and rotations.}}{4}{figure.4}\protected@file@percent }
+\newlabel{ti}{{4}{4}{(a) Stable placements on a tabletop environment. (b) Intermediate poses constrained to planar perturbations and rotations}{figure.4}{}}
+\newlabel{eq_langevin_update}{{7}{5}{Multi-step Regrasp Planning}{equation.3.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments and Analysis}{5}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Ablation Study of Connectivity Formualtions}{5}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Evaluation of pose sequence costs via pose interpolation {\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  in various grasp candidates\end  {CJK*}}. (a) Interpolated object motion from Goal to Start ($\mathbf  {T}_{\mathrm  {mid}}$). (b) Comparison of energy landscapes: (i) Naive summation $J^{+}_{s}$ exhibits spurious minima due to asymmetric connectivity; (ii) Truncated objective $J^{h}_{s}$ suffers from flat surfaces (vanishing gradients); (iii) Proposed cost $J_{s}$ ($\lambda _{\mathrm  {reg}}=0.5$) shows a distinct global minimum with strong gradients. (c) Ground truth count of shared grasps, confirming that $J_{s}$ correctly identifies the valid regrasp region.{\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  where $|\mathcal  {G}_{\mathrm  {shared}}|$ denotes the number of shared grasps for individual pose pairs ($(\mathbf  {T}_{\mathrm  {init}}, \mathbf  {T}_{\mathrm  {mid}})$ or $(\mathbf  {T}_{\mathrm  {mid}}, \mathbf  {T}_{\mathrm  {goal}})$). Furthermore, $|\mathcal  {G}_{\mathrm  {shared}}|_s$ represents the sum of shared grasps across the entire sequence $(\mathbf  {T}_{\mathrm  {init}}, \mathbf  {T}_{\mathrm  {mid}}, \mathbf  {T}_{\mathrm  {goal}})$, counted only when both transitions are simultaneously feasible.\end  {CJK*}}}}{5}{figure.5}\protected@file@percent }
+\newlabel{fig_shared_grasp_seq_exp}{{5}{5}{Evaluation of pose sequence costs via pose interpolation \lqin {in various grasp candidates}. (a) Interpolated object motion from Goal to Start ($\mathbf {T}_{\mathrm {mid}}$). (b) Comparison of energy landscapes: (i) Naive summation $J^{+}_{s}$ exhibits spurious minima due to asymmetric connectivity; (ii) Truncated objective $J^{h}_{s}$ suffers from flat surfaces (vanishing gradients); (iii) Proposed cost $J_{s}$ ($\lambda _{\mathrm {reg}}=0.5$) shows a distinct global minimum with strong gradients. (c) Ground truth count of shared grasps, confirming that $J_{s}$ correctly identifies the valid regrasp region.\lqin {where $|\mathcal {G}_{\mathrm {shared}}|$ denotes the number of shared grasps for individual pose pairs ($(\mathbf {T}_{\mathrm {init}}, \mathbf {T}_{\mathrm {mid}})$ or $(\mathbf {T}_{\mathrm {mid}}, \mathbf {T}_{\mathrm {goal}})$). Furthermore, $|\mathcal {G}_{\mathrm {shared}}|_s$ represents the sum of shared grasps across the entire sequence $(\mathbf {T}_{\mathrm {init}}, \mathbf {T}_{\mathrm {mid}}, \mathbf {T}_{\mathrm {goal}})$, counted only when both transitions are simultaneously feasible.}}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Comparison with Discrete Search Baseline}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{subsub_one_step_generation_exp}{{\mbox  {IV-B}}{5}{Comparison with Discrete Search Baseline}{subsection.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comparison of Average Validity Rate}}{6}{table.1}\protected@file@percent }
+\newlabel{tab_one_step_exp}{{I}{6}{Comparison of Average Validity Rate}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Generalization and Transferability}{6}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-C}1}Mid-pose generation on unseen grasps}{6}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Generalization Performance on unseen grasps}}{6}{table.2}\protected@file@percent }
+\newlabel{tab_unseen_grasps_step_exp}{{II}{6}{Generalization Performance on unseen grasps}{table.2}{}}
+\newlabel{subsec_unseen_end_effectors}{{\mbox  {IV-C}2}{6}{Cross-End-Effector Evaluation}{subsubsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IV-C}2}Cross-End-Effector Evaluation}{6}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Optimization \uline {process}{\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  result\end  {CJK*}} with the bottle object. (a) Five stable poses. (b) Evolution of the energy landscape during optimization (Blue: low energy/high connectivity). (c) Comparison of generated {\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  object\end  {CJK*}} pose distributions, {\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  the arrow provides a 2D visualization of each intermediate pose $\mathbf  {T}_{\mathrm  {mid}}$, originating at $(x, y)$ and pointing along the planar yaw $\theta $ in $\bm  {\xi }=[x,y,\theta ]^\top $, i.e., $(\cos \theta , \sin \theta )$; arrow color indicates pose cost (energy), with red for high energy and blue for low energy, consistent with the color bar. In the actual evaluation, the full 3D pose is used, with $z$-height and base orientation from the stable placement $\mathbf  {T}_{\mathrm  {s}}^{(m)}$ and in-plane rotation $\mathbf  {R}_z(\theta )$ (Eq.~\ref {eq_ensemble_init}).\end  {CJK*}}: (i) Ground Truth (GT) feasible regions obtained via exhaustive grid sampling; (ii-iii) Results from the naive cost $J^{+}_{s}$ and the truncated cost $J^{h}_{s}$, respectively. (iv) Results of the proposed cost $J_{s}$.{\color  {red}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  每个图是优化的第几步？为什么是pose相关，箭头方向表示什么？颜色表示能量应明确说明。\end  {CJK*}} {\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  1. (c)的图都是优化的结果，即最后一步。 2.好的，关于箭头和能量的颜色的说明在图中的caption增加了。\end  {CJK*}}}}{7}{figure.6}\protected@file@percent }
+\newlabel{fig_one_step_exp}{{6}{7}{Optimization \uline {process}\lqin {result} with the bottle object. (a) Five stable poses. (b) Evolution of the energy landscape during optimization (Blue: low energy/high connectivity). (c) Comparison of generated \lqin {object} pose distributions, \lqin {the arrow provides a 2D visualization of each intermediate pose $\mathbf {T}_{\mathrm {mid}}$, originating at $(x, y)$ and pointing along the planar yaw $\theta $ in $\boldsymbol {\xi }=[x,y,\theta ]^\top $, i.e., $(\cos \theta , \sin \theta )$; arrow color indicates pose cost (energy), with red for high energy and blue for low energy, consistent with the color bar. In the actual evaluation, the full 3D pose is used, with $z$-height and base orientation from the stable placement $\mathbf {T}_{\mathrm {s}}^{(m)}$ and in-plane rotation $\mathbf {R}_z(\theta )$ (Eq.~\ref {eq_ensemble_init}).}: (i) Ground Truth (GT) feasible regions obtained via exhaustive grid sampling; (ii-iii) Results from the naive cost $J^{+}_{s}$ and the truncated cost $J^{h}_{s}$, respectively. (iv) Results of the proposed cost $J_{s}$.\wan {每个图是优化的第几步？为什么是pose相关，箭头方向表示什么？颜色表示能量应明确说明。} \lqin {1. (c)的图都是优化的结果，即最后一步。 2.好的，关于箭头和能量的颜色的说明在图中的caption增加了。}}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Dataset overview: (a) Four representative object shapes (Bottle, Bunny, Pentagon, Mug) and their table-stable placement poses. (b) Pre-sampled grasp candidates set $\mathcal  {G}$ for six different end-effectors (three parallel grippers: WRS3, Robotiq-140/85; three suction cups: SC, VPA, ZP3) on different objects, used for cross-validation experiments to evaluate transferability across hardware configurations.{\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  这个图是要如何修改来着？\end  {CJK*}}{\color  {red}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  机器人的存在是否有意义？手抓不同比例尺是误导。\end  {CJK*}} {\color  {babyblue}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  把手爪的图片进行了修改，用机械臂来做参照物来看各个末端执行器放的相对大小情况。\end  {CJK*}}}}{7}{figure.7}\protected@file@percent }
+\newlabel{fig_unseen_exp}{{7}{7}{Dataset overview: (a) Four representative object shapes (Bottle, Bunny, Pentagon, Mug) and their table-stable placement poses. (b) Pre-sampled grasp candidates set $\mathcal {G}$ for six different end-effectors (three parallel grippers: WRS3, Robotiq-140/85; three suction cups: SC, VPA, ZP3) on different objects, used for cross-validation experiments to evaluate transferability across hardware configurations.\lqin {这个图是要如何修改来着？}\wan {机器人的存在是否有意义？手抓不同比例尺是误导。} \lqinextra {把手爪的图片进行了修改，用机械臂来做参照物来看各个末端执行器放的相对大小情况。}}{figure.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Cross-Validation Validity Rates}}{8}{table.3}\protected@file@percent }
+\newlabel{tab_cross_val_stack}{{III}{8}{Cross-Validation Validity Rates}{table.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Evolution of multi-step trajectory optimization (left to right). Cyan and red meshes represent $\mathbf  {T}_{\mathrm  {mid}_1}$ and $\mathbf  {T}_{\mathrm  {mid}_2}$. Colored lines denote sequential transitions: Blue ($\mathbf  {T}_{\mathrm  {init}} \to \mathbf  {T}_{\mathrm  {mid}_1}$), Red ($\mathbf  {T}_{\mathrm  {mid}_1} \rightarrow \mathbf  {T}_{\mathrm  {mid}_2}$), and Green ($\mathbf  {T}_{\mathrm  {mid}_2} \to \mathbf  {T}_{\mathrm  {goal}}$).}}{8}{figure.8}\protected@file@percent }
+\newlabel{fig_bottle_multi_step_generation}{{8}{8}{Evolution of multi-step trajectory optimization (left to right). Cyan and red meshes represent $\mathbf {T}_{\mathrm {mid}_1}$ and $\mathbf {T}_{\mathrm {mid}_2}$. Colored lines denote sequential transitions: Blue ($\mathbf {T}_{\mathrm {init}} \to \mathbf {T}_{\mathrm {mid}_1}$), Red ($\mathbf {T}_{\mathrm {mid}_1} \rightarrow \mathbf {T}_{\mathrm {mid}_2}$), and Green ($\mathbf {T}_{\mathrm {mid}_2} \to \mathbf {T}_{\mathrm {goal}}$)}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Evaluation of Adaptive Regrasp Planning}{8}{subsection.4.4}\protected@file@percent }
+\newlabel{subsec_iterative_planning_exp}{{\mbox  {IV-D}}{8}{Evaluation of Adaptive Regrasp Planning}{subsection.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Statistical performance of multi-step regrasp planning under different grasp sparsity levels ($N_{\text  {sub}}$).{\color  {darkgreen}\begin  {CJK*}{UTF8}{gkai}\relax \fontsize  {9}{10pt}\selectfont  $K_{\mathrm  {top}}\text  {-10} / K_{\mathrm  {top}}\text  {-50}$表格内容融合在一起了。\end  {CJK*}}}}{8}{table.4}\protected@file@percent }
+\newlabel{tab_planning_stats_combined}{{IV}{8}{Statistical performance of multi-step regrasp planning under different grasp sparsity levels ($N_{\text {sub}}$).\lqin {$K_{\mathrm {top}}\text {-10} / K_{\mathrm {top}}\text {-50}$表格内容融合在一起了。}}{table.4}{}}
+\bibstyle{IEEEtran}
+\bibdata{citations.bib}
+\bibcite{tournassoud1987regrasping}{1}
+\bibcite{cho2003complete}{2}
+\bibcite{simeon2004manipulation}{3}
+\bibcite{9865999}{4}
+\bibcite{10629240}{5}
+\bibcite{raessa2021planning}{6}
+\bibcite{8611208}{7}
+\bibcite{8453906}{8}
+\bibcite{8594303}{9}
+\bibcite{11037521}{10}
+\bibcite{10341842}{11}
+\bibcite{10093024}{12}
+\bibcite{10610974}{13}
+\bibcite{11247727}{14}
+\bibcite{wada2022reorientbot}{15}
+\bibcite{10610749}{16}
+\bibcite{9811547}{17}
+\bibcite{10313307}{18}
+\bibcite{10955269}{19}
+\bibcite{11247030}{20}
+\bibcite{10948354}{21}
+\bibcite{mitchell2025building}{22}
+\bibcite{9981264}{23}
+\bibcite{11316217}{24}
+\bibcite{7139796}{25}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions and Future Work}{9}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{9}{section*.1}\protected@file@percent }
+\newlabel{Appendix_I}{{V}{9}{Appendix}{section*.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Truncated Free Energy Score}{9}{subsection.5.1}\protected@file@percent }
+\newlabel{eq_truncated_free_energy}{{10}{9}{Truncated Free Energy Score}{equation.5.10}{}}
+\citation{7139796}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}EBM Training Details}{10}{subsection.5.2}\protected@file@percent }
+\newlabel{Appendix_EBM_Training}{{\mbox  {V-B}}{10}{EBM Training Details}{subsection.5.2}{}}
+\gdef \@abspage@last{10}
