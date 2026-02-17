@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.21)  17 FEB 2026 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.21)  17 FEB 2026 16:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,29 +1104,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-Underfull \hbox (badness 3792) in paragraph at lines 451--452
-\OT1/ptm/m/n/8 pose pairs.[]\OT1/ptm/m/n/9 validity\C70/gkai/m/n/9/66 / \C70/gkai/m/n/9/75 ( \C70/gkai/m/n/9/57 (\OT1/ptm/m/n/9 pair\C70/gkai/m/n/9/4e 
- \C70/gkai/m/n/9/76 „ \C70/gkai/m/n/9/ff ^^_ \C70/gkai/m/n/9/4e ^^M \C70/gkai/m/n/9/66 / \C70/gkai/m/n/9/65 t \C70/gkai/m/n/9/4e *\OT1/ptm/m/n/9 pose\C70/gkai/m/n/9/4e 
- \C70/gkai/m/n/9/54 ^^W \C70/gkai/m/n/9/ff ^^_[]
- []
-
-
-Underfull \hbox (badness 6364) in paragraph at lines 451--452
-[]\C70/gkai/m/n/9/53 ï \C70/gkai/m/n/9/80 ý \C70/gkai/m/n/9/8f Ù \C70/gkai/m/n/9/91 Ì \C70/gkai/m/n/9/6c ¡ \C70/gkai/m/n/9/67 	 \C70/gkai/m/n/9/88 h \C70/gkai/m/n/9/8f ð \C70/gkai/m/n/9/6e ^^E \C70/gkai/m/n/9/69 Z \C70/gkai/m/n/9/ff ^^L \C70/gkai/m/n/9/8f Ù \C70/gkai/m/n/9/91 Ì \C70/gkai/m/n/9/66 / \C70/gkai/m/n/9/62 @ \C70/gkai/m/n/9/67 	 \C70/gkai/m/n/9/76 „ \C70/gkai/m/n/9/7e Ó \C70/gkai/m/n/9/67 œ \C70/gkai/m/n/9/66 /
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 451--452
-\C70/gkai/m/n/9/57 ( \C70/gkai/m/n/9/91 Ç \C70/gkai/m/n/9/68 7 \C70/gkai/m/n/9/52 0 \C70/gkai/m/n/9/76 „\OT1/ptm/m/n/9 10\C70/gkai/m/n/9/4e *$\OMS/cmsy/m/n/9 f\OT1/cmr/bx/n/9 T[]\OML/cmm/m/it/9 ; \OT1/cmr/bx/n/9 T[]\OMS/cmsy/m/n/9 g$\C70/gkai/m/n/9/5b ù \C70/gkai/m/n/9/8f Û \C70/gkai/m/n/9/88 L$\OT1/cmr/bx/n/9 T[]$\C70/gkai/m/n/9/89 Ä \C70/gkai/m/n/9/52 ^^R \C70/gkai/m/n/9/76 „ \C70/gkai/m/n/9/5e s \C70/gkai/m/n/9/57 G \C70/gkai/m/n/9/7e Ó
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 451--452
-\C70/gkai/m/n/9/76 „\OT1/ptm/m/n/9 Js\C70/gkai/m/n/9/67 ^^@ \C70/gkai/m/n/9/5c ^^O \C70/gkai/m/n/9/76 „\OT1/ptm/m/n/9 topK\C70/gkai/m/n/9/ff ^^_ \C70/gkai/m/n/9/54 Œ\OT1/ptm/m/n/9 valid\C70/gkai/m/n/9/67 	 \C70/gkai/m/n/9/4e À H \C70/gkai/m/n/9/51 s \C70/gkai/m/n/9/7c û[] []\OT1/ptm/m/n/9 va-lid-ity rate\C70/gkai/m/n/9/66 / \C70/gkai/m/n/9/75 ^^_ \C70/gkai/m/n/9/62 ^^P
- []
-
-
-Overfull \hbox (0.71991pt too wide) in paragraph at lines 437--454
+Overfull \hbox (72.36795pt too wide) in paragraph at lines 437--454
  [] 
  []
 
@@ -1167,13 +1145,17 @@ File: UTF8.chr 2021/10/16 4.8.5
 File: UTF8.enc 2021/10/16 4.8.5
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
+) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+File: UTF8.enc 2021/10/16 4.8.5
+) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
+File: UTF8.chr 2021/10/16 4.8.5
 )
-<imgs/bottle_multi_step_generation.jpg, id=349, 1912.14375pt x 764.8575pt>
+<imgs/bottle_multi_step_generation.jpg, id=350, 1912.14375pt x 764.8575pt>
 File: imgs/bottle_multi_step_generation.jpg Graphic file (type jpg)
 <use imgs/bottle_multi_step_generation.jpg>
 Package pdftex.def Info: imgs/bottle_multi_step_generation.jpg  used on input line 611.
 (pdftex.def)             Requested size: 252.0pt x 100.80045pt.
- [6] [7 <./imgs/compare.jpg> <./imgs/unseen_manipulator.jpg>] (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+ (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
@@ -1182,7 +1164,10 @@ File: UTF8.chr 2021/10/16 4.8.5
 LaTeX Font Warning: Font shape `C70/gkai/m/sc' undefined
 (Font)              using `C70/gkai/m/n' instead on input line 714.
 
-(/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
+
+Underfull \vbox (badness 4940) has occurred while \output is active []
+
+ [6] [7 <./imgs/compare.jpg> <./imgs/unseen_manipulator.jpg>] (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
@@ -1225,15 +1210,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1A4B139A194177B93F9EA305131412AC;3708.
  ) 
 Here is how much of TeX's memory you used:
- 27377 strings out of 474222
- 495433 string characters out of 5748733
+ 27389 strings out of 474222
+ 495714 string characters out of 5748733
  1992975 words of memory out of 5000000
- 48701 multiletter control sequences out of 15000+600000
+ 48709 multiletter control sequences out of 15000+600000
  634421 words of font info for 212 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,93p,1969b,1010s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu30.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu4e.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu4f.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu50.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu51.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu52.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu53.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu54.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu56.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu57.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu58.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu59.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu5b.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu5c.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu5d.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu5e.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu5f.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu60.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu61.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu62.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu63.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu65.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu66.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu67.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu68.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu69.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu6b.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu6c.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu6e.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu71.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu72.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu73.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu74.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu75.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu76.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu77.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu78.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu79.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu7a.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu7b.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu7c.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu7e.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu80.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu81.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu82.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu86.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu87.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu88.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu89.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu8b.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu8c.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu8d.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu8f.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu90.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu91.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu95.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu96.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu97.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu98.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiu9a.pfb></usr/share/texmf/fonts/type1/arphic/gkaiu/gkaiuff.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 5486005 bytes).
+Output written on main.pdf (10 pages, 5487640 bytes).
 PDF statistics:
  849 PDF objects out of 1000 (max. 8388607)
  567 compressed objects within 6 object streams
