@@ -131,7 +131,7 @@ Experiments on a 6-DoF manipulator demonstrate that the proposed cost formulatio
 In summary, our key contribution is a differentiable pose sequence connectivity cost derived from compositional EBMs, which transforms discrete shared-grasp constraints into a smooth energy landscape and enables gradient-based optimization of intermediate object poses. Building on this cost formulation, we also present an instantiation as an adaptive multi-step planner that jointly optimizes intermediate poses and determines the required number of regrasp steps via iterative deepening and Langevin dynamics.
 
 \section{Related Work}
-\subsection{Graph-Based Regrasp Planning}
+\subsection{Graph-Based Regrasp Planning} \lqin{修改ing，因为文章中并未直接对基于图的方法进行对比，所以表述上需要缓和一点；}
 % 基于图的重新抓取规划通常构建一个连接图，其中节点表示离散采样的对象抓取对。建立边来连接共享相同对象姿势（传输动作）或跨不同对象姿势（传输动作）的相同抓取配置的节点。给定初始和目标物体姿势，然后采用规划算法来评估连接性并搜索跨抓取模式的可行路径。万等人。 \cite{wan2019preparatory} 率先将这种方法应用于桌面设置中的单臂重新抓取和双臂切换规划。解决环境复杂性，Ma 等人。 \cite{ma2018regrasp} 将此框架扩展到非结构化和杂乱的静态环境。
 %除了标准的拾取和放置任务之外，图搜索方法已广泛应用于灵巧的操作场景。克鲁恰尼等人。 \cite{cruciani2018dexterous} 将图形搜索引入到手动操作中，解决了手指无法保持持续接触的重新抓取计划。在此基础上，Nagahama 等人。 \cite{nagahama2025bimanual} 利用图形搜索来减轻手动操作的不确定性，从而显着提高抓取精度。
 %为了解决涉及复杂动态或长期视野的规划挑战，研究人员引入了额外的模式和抽象策略。考虑到抓握稳定性，Hu 等人。 \cite{hu2023multi} 将滑动动作纳入重新抓取框架中，以暴露潜在的可行抓取，建立通过 MDP 规划的多模式转换图。在可变形物体组装任务中，Qin 等人。 \cite{qin2023dual} 提出围绕对象的理想路径构建局部 Voronoi 图，将重新抓取视为解决几何阻塞的被动修复机制。对于涉及刚体的顺序操作谜题，Levit 等人。 \cite{levit2024solving} 提出通过搜索“更简单的子问题”序列来减少规划维度，并使用启发式方法来指导操作顺序。此外，Levit 和 Toussaint \cite{levit2025regrasp} 引入了“Regrasp Maps”，它对空间进行体素化并基于抓取签名构建全局状态抽象，有效地指导求解器在高度受限的环境中发现复杂的重新抓取序列。
@@ -386,7 +386,7 @@ Table~\ref{tab_one_step_exp} shows the average planning success rates of all tes
 
 \begin{table}[!htbp]
 \centering
-\caption{Comparison of Average Planning Success Rates}
+\caption{Comparison of Average \uline{Planning}\lqin{Verification} Success Rates \lqin{代码重新核实了一下，的确是对生成的结果做了ik+cd的check. 故是verification}}
 \label{tab_one_step_exp}
 \begin{threeparttable}
 \setlength\tabcolsep{3.25pt} % 优化列间距
@@ -421,11 +421,12 @@ Table~\ref{tab_one_step_exp} shows the average planning success rates of all tes
 \subsubsection{Mid-pose generation on unseen grasps}
 In this experiment, we evaluated the generalization capability of the $J_\mathrm{seq}$ cost using a separate randomly sampled set of 200 unseen grasps in 10 given sequences same as experiment~\ref{subsub_one_step_generation_exp}.
 
-As seen in the ``Usn'' columns of Table \ref{tab_one_step_exp}, the method exhibits capability to generalize to unseen grasp configurations. Although there is an expected performance gap between the ``Usn'' column and the $J_\mathrm{seq}$ column (seen), the gap is acceptable and the planning success rate on unseen grasps remains satisfying for less complicated geometries like the Bottle. For the Bunny, the method achieves higher precision in the narrow $K_{\mathrm{top}}$=10 range for unseen grasps. This suggests that the learned energy landscape captures the underlying object geometry effectively, allowing the optimizer to work with the unseen set that were not explicitly covered during training. However, for the Mug and Pentagon, more significant drops are observed. This may stem from: (1) insufficient grasps (200) to capture spatial diversity; (2) unseen grasps inadequately covering successful transitions. Both factors can lead to biased energy evaluations and reduced planning success.
+As seen in the ``Usn'' columns of Table \ref{tab_one_step_exp}, the method exhibits the capability to generalize to unseen grasp configurations. Although there is an expected performance gap between the ``Usn'' column and the $J_\mathrm{seq}$ column (seen), the gap is acceptable and the \uline{planning}\lqin{verification} success rate on unseen grasps remains satisfying for less complicated geometries like the Bottle. For the Bunny, the method achieves higher precision in the narrow $K_{\mathrm{top}}$=10 range for unseen grasps. This suggests that the learned energy landscape captures the underlying object geometry effectively, allowing the optimizer to work with the unseen set that were not explicitly covered during training. However, for the Mug and Pentagon, more significant drops are observed. This may stem from: (1) insufficient grasps (200) to capture spatial diversity; (2) unseen grasps inadequately covering successful transitions. Both factors can lead to biased energy evaluations and reduced planning success.
 
 \subsubsection{Cross-End-Effector evaluation}
 \label{subsec_unseen_end_effectors}
-To investigate the versatility of the EBM framework, we evaluated its generalization capability across diverse hardware configurations. Six end-effectors (EEs) were classified based on the strictness of their geometric constraints. We denote the six EEs as W, R1, R2, S1, S2, S3, corresponding to: three parallel grippers (Self-made (W), Robotiq-140 (R1), and Robotiq-85 (R2)), and three suction cups (S1, S2, S3), as shown by Fig. \ref{fig_unseen_exp}. The grippers represent stringent constraints as they require dual-contact alignment and stroke clearance. In constrast, the suction cups represent relaxed constraints and only require single-surface contact. All of them have different Tool Center Points (TCPs). We conducted a $6 \times 6$ cross-evaluation where an EBM trained on one EE was employed to guide single-itermediate pose optimization for another. To ensure a fair comparison, all EBMs were trained on datasets of equal size (20k samples). The planning success rate within the $K_{\mathrm{top}}$=100 generated poses are reported, as shown in Table. \ref{tab_cross_val_stack}.
+\lqin{正在重新实验ing.}
+To investigate the versatility of the EBM framework, we evaluated its generalization capability across diverse hardware configurations. Six end-effectors (EEs) were classified based on the strictness of their geometric constraints. We denote the six EEs as W, R1, R2, S1, S2, S3, corresponding to: three parallel grippers (Self-made (W), Robotiq-140 (R1), and Robotiq-85 (R2)), and three suction cups (S1, S2, S3), as shown by Fig. \ref{fig_unseen_exp}. The grippers represent stringent constraints as they require dual-contact alignment and stroke clearance. In contrast, the suction cups represent relaxed constraints and only require single-surface contact. All of them have different Tool Center Points (TCPs). We conducted a $6 \times 6$ cross-evaluation where an EBM trained on one EE was employed to guide single-itermediate pose optimization for another. To ensure a fair comparison, all EBMs were trained on datasets of equal size (20k samples) \lqin{and the input of EBMs withdraws the end-effector gripper width $w$, such that $E_{\phi_f}(\boldsymbol{T},\boldsymbol{g}')$ where $\boldsymbol{g}'\in\mathcal{G}' \triangleq SE(3)$. For each object, we pre-generated 10 no-shared-grasp pose pairs per end-effector, where pose pairs were conditioned on the end-effector being tested.} The \uline{planning}\lqin{average verification} success rate within the $K_{\mathrm{top}}$=100 generated poses are reported, as shown in Table. \ref{tab_cross_val_stack}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{imgs/unseen_manipulator.jpg}
@@ -437,7 +438,7 @@ The results exhibit a strong unidirectional transferability governed by constrai
 
 \begin{table}[!htbp]
 \centering
-\caption{Planning Success Rates of Cross-End-Effector Evaluation}
+\caption{\uline{Planning}\lqin{Average Verification} Success Rates of Cross-End-Effector Evaluation \lqin{代码重新核实了一下，的确是对生成的结果做了ik+cd的check. 故是verification}}
 \label{tab_cross_val_stack}
 \begin{threeparttable}
 \setlength\tabcolsep{1.5pt}
