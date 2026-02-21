@@ -1,0 +1,47 @@
+# ===== LaTeX build artifacts =====
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.glo
+*.glg
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.loa
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+*.dvi
+*.ps
+
+# latexmk / arara / build dirs
+*.latexmain
+*.synctex(busy)
+_minted-*/
+latex.out/
+build/
+out/
+
+# ===== Editors / OS =====
+.vscode/
+.DS_Store
+Thumbs.db
+
+# If you also don't want to commit PDFs, uncomment:
+*.pdf
